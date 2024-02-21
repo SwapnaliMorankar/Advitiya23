@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Input</title>
+</head>
+<body>
+    <h1>Transaction Manager</h1>
+    <h3>Government to</h3>
+    <form id="todo-form">
+        <input type="text" id="task" placeholder="Enter a task">
+        <button type="submit">Add Task</button>
+    </form>
+
+    <script>
+        document.getElementById('todo-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Get the task input
+    const taskInput = document.getElementById('task');
+    const task = taskInput.value;
+
+    // Validate input
+    if (task.trim() === '') {
+        alert('Please enter a task.');
+        return;
+    }
+
+    // Store the task (you can use localStorage, server-side scripting, etc.)
+    // For this example, we'll use localStorage
+    const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    tasks.push(task);
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+
+    // Redirect to the list page
+    window.location.href = 'sample2.html';
+});
+
+    </script>
+</body>
+</html>

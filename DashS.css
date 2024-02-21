@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.list{
+    height: auto;
+    width: 30%;
+    background-image: url(school-safeimagekit.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: black;
+    font-size: large;
+    text-align: center;
+    padding: 20px;
+    border-right: 5px solid black;
+}
+.box1{
+    width: 70%;
+    height: 70px;
+    margin-left: 30%;
+    background-color: rgb(199, 198, 198);
+    border-radius: 5px;
+    margin-top: -47%;
+}
+.box2{
+    width: 70%;
+    height: 70px;
+    margin-left: 30%;
+    background-color: rgb(199, 198, 198);
+    border-radius: 5px;
+    margin-top: 2.5%;
+    box-shadow: none;
+}
+.img1{
+    margin-left: 58%;
+    margin-top: 7%;
+    border: 2px solid black;
+}
+.img2{
+    margin-left: 43%;
+    margin-top: 7%;
+    height: 300px;
+    width: 300px;
+    border: 2px solid black;
+}
+.img{
+    display: flex;
+    justify-content: space-evenly;
+}
+.box1 h1{
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.box2 h1{
+    margin-left: -500px;
+    padding-top: 10px;
+}
+

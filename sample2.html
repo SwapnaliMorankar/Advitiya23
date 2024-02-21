@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="sample2.css">
+</head>
+<body>
+    <h1>To-Do List</h1>
+    <ul id="task-list"></ul>
+    <a href="sample1.html">Go Back to Input</a>
+
+
+    <script>
+        const taskList = document.getElementById('task-list');
+
+// Retrieve tasks from storage
+const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+// Display tasks in the list
+tasks.forEach((task, index) => {
+    const li = document.createElement('li');
+    li.textContent = `${index + 1}. ${task}`;
+    taskList.appendChild(li);
+});
+
+    </script>
+</body>
+</html>
